@@ -82,6 +82,14 @@ a:hover, a:active {
 button:focus {
   border: none;
   outline: 0; }
+@media (max-width: 768px) {
+  .linkedin-icon {
+    /* Ensure the icon has correct size, positioning, and display */
+    display: block;
+    /* Add padding, margins, etc. to make it clickable */
+  }
+}
+
 
 ul {
   list-style: none; }
@@ -1042,7 +1050,43 @@ blockquote {
       outline: none; }
     .mdl-layout__drawer .mdl-navigation li ul li .mdl-navigation__link {
       padding-left: 72px; }
-
+      .social-icons {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .social-icons li {
+        margin: 10px;  /* Space out the icons for mobile */
+    }
+    
+    .social-icons a {
+        display: inline-block;
+        padding: 10px;  /* Add enough padding for a touchable area */
+        text-decoration: none;
+        color: inherit;
+        font-size: 24px;  /* Set icon size */
+    }
+    
+    .social-icons a:hover {
+        color: #0077b5; /* LinkedIn blue on hover */
+    }
+    
+    .mdl-tooltip {
+        display: none;  /* Hide tooltip, optional for mobile */
+    }
+    
+    /* Ensure the link is large enough to click/touch on mobile */
+    @media screen and (max-width: 768px) {
+        .social-icons a {
+            font-size: 32px;  /* Increase the size of the icon for better touch target */
+            padding: 15px;  /* Make the touch target larger */
+        }
+    }
+    
 .mdl-layout__drawer-right {
   width: 210px;
   height: 100%;
